@@ -8,5 +8,6 @@
 	</bean>
 
 	<bean id="firstBeanFactoryProcessor" class="com.tupu.testing.config.FirstBeanFactoryProcessor"/>
+	<bean id="firstBeanProcessor" class="com.tupu.testing.config.FirstBeanPostProcessor"/>
 
 </beans>
