@@ -7,4 +7,6 @@
 		<property name="name" value="firstBean"/>
 	</bean>
 
+	<bean id="firstBeanFactoryProcessor" class="com.tupu.testing.config.FirstBeanFactoryProcessor"/>
+
 </beans>
