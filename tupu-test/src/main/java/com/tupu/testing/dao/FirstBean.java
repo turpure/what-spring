@@ -14,4 +14,8 @@ public class FirstBean {
 	public String getName() {
 		return name;
 	}
+
+	public void initIt() {
+		System.out.println("in initialization");
+	}
 }
