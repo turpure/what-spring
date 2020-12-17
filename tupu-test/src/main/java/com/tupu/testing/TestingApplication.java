@@ -14,7 +14,7 @@ public class TestingApplication {
 	public static void main(String[] args) {
 		ApplicationContext  context = new ClassPathXmlApplicationContext("spring-config.xml");
 		FirstBean firstBean = (FirstBean) context.getBean("firstBean");
-		String name = firstBean.getName();
+		String name = firstBean.getBeanName();
 		System.out.println(name);
 	}
 }
