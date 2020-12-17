@@ -3,6 +3,7 @@ package com.tupu.testing;
 import com.tupu.testing.dao.FirstBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.Environment;
 
 /**
  * @author zhoupengxu
@@ -15,6 +16,8 @@ public class TestingApplication {
 		ApplicationContext  context = new ClassPathXmlApplicationContext("spring-config.xml");
 		FirstBean firstBean = (FirstBean) context.getBean("firstBean");
 		String name = firstBean.getBeanName();
-		System.out.println(name);
+		Environment env = firstBean.getEnvironment();
+		System.out.println("the name of bean is " + name);
+		System.out.println(env);
 	}
 }
