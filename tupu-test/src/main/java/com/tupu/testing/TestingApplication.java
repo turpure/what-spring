@@ -1,8 +1,8 @@
 package com.tupu.testing;
 
+import com.tupu.testing.context.MyContext;
 import com.tupu.testing.dao.FirstBean;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
 
 public class TestingApplication {
 	public static void main(String[] args) {
-		ApplicationContext  context = new ClassPathXmlApplicationContext("spring-config.xml");
+		ApplicationContext  context = new MyContext("spring-config.xml");
 		FirstBean firstBean = (FirstBean) context.getBean("firstBean");
 		String name = firstBean.getBeanName();
 		Environment env = firstBean.getEnvironment();
